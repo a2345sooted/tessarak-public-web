@@ -107,6 +107,24 @@ function App() {
                         https://discord.gg/jb35c6gM
                     </Typography>
                 </Box>
+                <Box sx={{marginTop: '50px'}}>
+                    <Typography variant="h5" sx={styles.subHeader}>Special Thanks:</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- TheDarkNode</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="subtitle2" sx={styles.needText}>TheDarkNode setup and runs the discord server.</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- Tessa Glenn, The Curl Whisperer</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="subtitle2" sx={styles.needText}>Tessa is a hairstylist in Columbia, MO.  Her name served as an inspiration for Tessarak.</Typography>
+                </Box>
+                <Box sx={{marginTop: '50px'}}>
+                    <Typography variant="h4" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#029aa8'}}>Come to the discord server!</Typography>
+                </Box>
             </Container>
         </ThemeProvider>
     );
