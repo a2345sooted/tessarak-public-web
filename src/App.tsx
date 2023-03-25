@@ -108,6 +108,35 @@ function App() {
                     </Typography>
                 </Box>
                 <Box sx={{marginTop: '50px'}}>
+                    <Typography variant="h5" sx={styles.subHeader}>Where is the code?</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- Here is the code for the react native mobile app:</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography
+                        component={Link}
+                        target="_blank"
+                        href="https://discord.gg/jb35c6gM"
+                        variant="h6"
+                        sx={[styles.needText, {color: '#029aa8'}]}>
+                        https://github.com/a2345sooted/tessarak-social
+                    </Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- Here is the code for this public website app:</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography
+                        component={Link}
+                        target="_blank"
+                        href="https://discord.gg/jb35c6gM"
+                        variant="h6"
+                        sx={[styles.needText, {color: '#029aa8'}]}>
+                        https://github.com/a2345sooted/tessarak-public-web
+                    </Typography>
+                </Box>
+                <Box sx={{marginTop: '50px'}}>
                     <Typography variant="h5" sx={styles.subHeader}>Special Thanks:</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
