@@ -86,10 +86,22 @@ function App() {
                     <Typography variant="subtitle2" sx={styles.needText}>Even if you don't have the time to contribute to code directly, please still come and toss out ideas, help avoid pitfalls.</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- Business, Lawyers, Accountants</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="subtitle2" sx={styles.needText}>We are probably gonna need to create a non-profit and all that, right? :)</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
                     <Typography variant="h6" sx={styles.needTitle}>- Marketers</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
                     <Typography variant="subtitle2" sx={styles.needText}>We need energy thrown at refining this message and making it presentable and adoptable.</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- Other Volunteers</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="subtitle2" sx={styles.needText}>Hype this mug up!  Be available to help when needed.  Think up ideas and share them in the Discord.</Typography>
                 </Box>
                 <Box sx={{marginTop: '50px'}}>
                     <Typography variant="h5" sx={styles.subHeader}>Where can we talk for now?</Typography>
