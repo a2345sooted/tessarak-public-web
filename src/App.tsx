@@ -59,13 +59,13 @@ function App() {
                     <Typography variant="h6" sx={styles.needTitle}>- Influencers</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
-                    <Typography variant="subtitle2" sx={styles.needText}>We need people will followings to bring attention here.  Are you an influencer?  Know someone?</Typography>
+                    <Typography variant="subtitle2" sx={styles.needText}>We need people with followings to bring attention here.  Are you an influencer?  Know someone?</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
                     <Typography variant="h6" sx={styles.needTitle}>- Early Adopters</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
-                    <Typography variant="subtitle2" sx={styles.needText}>Get the app, be patient, be thorough, communicative, and dream BIG.</Typography>
+                    <Typography variant="subtitle2" sx={styles.needText}>Get the app before it's in the app stores, be patient, be thorough, communicative, and dream BIG.</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
                     <Typography variant="h6" sx={styles.needTitle}>- Backend Developers</Typography>
@@ -83,7 +83,7 @@ function App() {
                     <Typography variant="h6" sx={styles.needTitle}>- Experienced Tech Consultants</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
-                    <Typography variant="subtitle2" sx={styles.needText}>Even if you don't have the time to contribute to code directly, your experience is super valued.  Come guide this.</Typography>
+                    <Typography variant="subtitle2" sx={styles.needText}>Even if you don't have the time to contribute to code directly, please still come and toss out ideas, help avoid pitfalls.</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
                     <Typography variant="h6" sx={styles.needTitle}>- Marketers</Typography>
