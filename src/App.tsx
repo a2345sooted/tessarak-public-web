@@ -117,7 +117,7 @@ function App() {
                     <Typography
                         component={Link}
                         target="_blank"
-                        href="https://discord.gg/jb35c6gM"
+                        href="https://github.com/a2345sooted/tessarak-social"
                         variant="h6"
                         sx={[styles.needText, {color: '#029aa8'}]}>
                         https://github.com/a2345sooted/tessarak-social
@@ -130,7 +130,7 @@ function App() {
                     <Typography
                         component={Link}
                         target="_blank"
-                        href="https://discord.gg/jb35c6gM"
+                        href="https://github.com/a2345sooted/tessarak-public-web"
                         variant="h6"
                         sx={[styles.needText, {color: '#029aa8'}]}>
                         https://github.com/a2345sooted/tessarak-public-web
