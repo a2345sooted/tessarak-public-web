@@ -36,7 +36,7 @@ function App() {
                     <Typography variant="h2" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#029aa8'}}>Tessarak</Typography>
                 </Box>
                 <Box>
-                    <Typography variant="h5" sx={{fontFamily: 'Exo 2', fontWeight: '400', color: '#e1e1e1'}}>Opensource, decentralized social media.</Typography>
+                    <Typography variant="h5" sx={{fontFamily: 'Exo 2', fontWeight: '400', color: '#e1e1e1'}}>Indestructible, opensource, decentralized social media.</Typography>
                 </Box>
                 <Grid container spacing={2} sx={{marginTop: '20px'}}>
                     <Grid xs={12} md={4}><InfoCard title="5+" subtitle="Dimensions"/></Grid>
