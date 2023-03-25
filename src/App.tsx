@@ -152,7 +152,7 @@ function App() {
                     <Typography variant="subtitle2" sx={styles.needText}>Tessa is a hairstylist in Columbia, MO.  Her name served as an inspiration for Tessarak.</Typography>
                 </Box>
                 <Box sx={{marginTop: '50px'}}>
-                    <Typography variant="h4" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#029aa8'}}>Come to the discord server!</Typography>
+                    <Typography variant="h4" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#029aa8'}}>Come to the discord server to chat, get setup on the repos, and/or get the mobile app!</Typography>
                 </Box>
             </Container>
         </ThemeProvider>
