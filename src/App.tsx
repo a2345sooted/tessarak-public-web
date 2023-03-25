@@ -1,73 +1,137 @@
 import React, { useState } from 'react';
 import './App.css';
 import CssBaseline from "@mui/material/CssBaseline";
-import { Box, ThemeProvider, Typography, Container, Divider, Card, CardContent } from '@mui/material';
+import { Box, ThemeProvider, Typography, Container, Divider, Card, CardContent, Link } from '@mui/material';
 import { DARK_THEME } from './themes';
 import Grid from '@mui/material/Unstable_Grid2';
 
+type InfoCardProps = {
+    title: string;
+    subtitle: string;
+}
+
+function InfoCard({title, subtitle}: InfoCardProps): JSX.Element {
+    return (
+        <Card variant="outlined">
+            <CardContent>
+                <Box sx={{textAlign: 'center'}}>
+                    <Typography variant="h2" sx={[styles.cardSubtitle, {fontWeight: '600'}]}>{title}</Typography>
+                </Box>
+                <Box sx={{textAlign: 'center'}}>
+                    <Typography variant="h6" sx={styles.cardSubtitle}>{subtitle}</Typography>
+                </Box>
+            </CardContent>
+        </Card>
+    );
+}
+
 
 function App() {
-  const [theme, setTheme] = useState(DARK_THEME);
-  return (
-      <ThemeProvider theme={theme}>
-          <CssBaseline/>
-          <Container maxWidth="md" sx={{paddingTop: '40px', paddingLeft: '40px', paddingRight: '40px'}}>
-              <Box>
-                  <Typography variant="h2" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#029aa8'}}>Tessarak</Typography>
-              </Box>
-              <Box>
-                  <Typography variant="h5" sx={{fontFamily: 'Exo 2', fontWeight: '400', color: '#e1e1e1'}}>Opensource, decentralized social media.</Typography>
-              </Box>
-              {/*<Divider sx={{marginTop: '16px', marginBottom: '16px'}}/>*/}
-              <Grid container spacing={2} sx={{marginTop: '20px'}}>
-                  <Grid xs={12} md={4}>
-                      <Card variant="outlined">
-                          <CardContent>
-                              <Box sx={{textAlign: 'center'}}>
-                                  <Typography variant="h2" sx={[styles.cardSubtitle, {fontWeight: '600'}]}>5+</Typography>
-                              </Box>
-                              <Box sx={{textAlign: 'center'}}>
-                                  <Typography variant="h6" sx={styles.cardSubtitle}>Dimensions</Typography>
-                              </Box>
-                          </CardContent>
-                      </Card>
-                  </Grid>
-                  <Grid xs={12} md={4}>
-                      <Card variant="outlined">
-                          <CardContent>
-                              <Box sx={{textAlign: 'center'}}>
-                                  <Typography variant="h2" sx={[styles.cardSubtitle, {fontWeight: '600'}]}>2</Typography>
-                              </Box>
-                              <Box sx={{textAlign: 'center'}}>
-                                  <Typography variant="h6" sx={styles.cardSubtitle}>Requirements</Typography>
-                              </Box>
-                          </CardContent>
-                      </Card>
-                  </Grid>
-                  <Grid xs={12} md={4}>
-                      <Card variant="outlined">
-                          <CardContent>
-                              <Box sx={{textAlign: 'center'}}>
-                                  <Typography variant="h2" sx={[styles.cardSubtitle, {fontWeight: '600'}]}>ZERO</Typography>
-                              </Box>
-                              <Box sx={{textAlign: 'center'}}>
-                                  <Typography variant="h6" sx={styles.cardSubtitle}>Compromises</Typography>
-                              </Box>
-                          </CardContent>
-                      </Card>
-                  </Grid>
-              </Grid>
-          </Container>
-      </ThemeProvider>
-  );
+    const [theme, setTheme] = useState(DARK_THEME);
+    return (
+        <ThemeProvider theme={theme}>
+            <CssBaseline/>
+            <Container maxWidth="md" sx={{paddingTop: '40px', paddingLeft: '40px', paddingRight: '40px', paddingBottom: '150px'}}>
+                <Box>
+                    <Typography variant="h2" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#029aa8'}}>Tessarak</Typography>
+                </Box>
+                <Box>
+                    <Typography variant="h5" sx={{fontFamily: 'Exo 2', fontWeight: '400', color: '#e1e1e1'}}>Opensource, decentralized social media.</Typography>
+                </Box>
+                <Grid container spacing={2} sx={{marginTop: '20px'}}>
+                    <Grid xs={12} md={4}><InfoCard title="5+" subtitle="Dimensions"/></Grid>
+                    <Grid xs={12} md={4}><InfoCard title="1" subtitle="Requirement"/></Grid>
+                    <Grid xs={12} md={4}><InfoCard title="ZERO" subtitle="Compromises"/></Grid>
+                </Grid>
+                <Box sx={{marginTop: '50px'}}>
+                    <Typography variant="h5" sx={styles.subHeader}>The Requirement:</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- Can NOT be censored or shut down by government or corporations.</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="subtitle1" sx={styles.needText}>*** If we can not meet that requirement with our current tech, then we are gonna build new tech that can meet that requirement.</Typography>
+                </Box>
+                <Box sx={{marginTop: '50px'}}>
+                    <Typography variant="h5" sx={styles.subHeader}>What we urgently need from the community:</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- Influencers</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="subtitle2" sx={styles.needText}>We need people will followings to bring attention here.  Are you an influencer?  Know someone?</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- Early Adopters</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="subtitle2" sx={styles.needText}>Get the app, be patient, be thorough, communicative, and dream BIG.</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- Backend Developers</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="subtitle2" sx={styles.needText}>Particularly blockchain stuff, decentralized P2P, etc.</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- Frontend Developers</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="subtitle2" sx={styles.needText}>Currently, it's React Native and React web.  But it's possible for this stack to end up somewhere we can't see quite yet.  If you are good with frontend (UI, UX, code), please come contribute.</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- Experienced Tech Consultants</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="subtitle2" sx={styles.needText}>Even if you don't have the time to contribute to code directly, your experience is super valued.  Come guide this.</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- Marketers</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="subtitle2" sx={styles.needText}>We need energy thrown at refining this message and making it presentable and adoptable.</Typography>
+                </Box>
+                <Box sx={{marginTop: '50px'}}>
+                    <Typography variant="h5" sx={styles.subHeader}>Where can we talk for now?</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- The Tessarak Project Discord Server</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography
+                        component={Link}
+                        target="_blank"
+                        href="https://discord.gg/jb35c6gM"
+                        variant="h6"
+                        sx={[styles.needText, {color: '#029aa8'}]}>
+                        https://discord.gg/jb35c6gM
+                    </Typography>
+                </Box>
+            </Container>
+        </ThemeProvider>
+    );
 }
 
 const styles = {
-  cardSubtitle: {
-      fontFamily: 'Exo 2',
-      fontWeight: '400',
-      color: '#f3f3f3'
-  }
+    cardSubtitle: {
+        fontFamily: 'Exo 2',
+        fontWeight: '400',
+        color: '#f3f3f3'
+    },
+    subHeader: {
+        fontFamily: 'Exo 2',
+        fontWeight: '400',
+        color: '#e1e1e1'
+    },
+    needTitle: {
+        fontFamily: 'Exo 2',
+        fontWeight: 'bold',
+        color: '#e1e1e1'
+    },
+    needText: {
+        fontFamily: 'Exo 2',
+        color: '#e1e1e1'
+    }
 };
 
 export default App;
