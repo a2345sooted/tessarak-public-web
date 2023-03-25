@@ -130,7 +130,7 @@ function App() {
                         component={Link}
                         target="_blank"
                         href="https://github.com/a2345sooted/tessarak-social"
-                        variant="h6"
+                        variant="subtitle1"
                         sx={[styles.needText, {color: '#029aa8'}]}>
                         https://github.com/a2345sooted/tessarak-social
                     </Typography>
@@ -143,7 +143,7 @@ function App() {
                         component={Link}
                         target="_blank"
                         href="https://github.com/a2345sooted/tessarak-public-web"
-                        variant="h6"
+                        variant="subtitle1"
                         sx={[styles.needText, {color: '#029aa8'}]}>
                         https://github.com/a2345sooted/tessarak-public-web
                     </Typography>
