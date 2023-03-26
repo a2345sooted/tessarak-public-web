@@ -193,6 +193,24 @@ function App() {
                 <Box sx={{marginTop: '10px'}}>
                     <Typography variant="subtitle2" sx={styles.needText}>TheDarkNode setup and runs the discord server.</Typography>
                 </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- Tessa Glenn, The Curl Whisperer</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="subtitle2" sx={styles.needText}>Tessa is a hairstylist in Columbia, MO. She served as an inspiration with her name and Tessarak started an AI companion for hairstylists.</Typography>
+                </Box>
+                <Box sx={{marginTop: '50px'}}>
+                    <Typography variant="h5" sx={[styles.subHeader, {color: '#029aa8', fontWeight: 'bold'}]}>What to do right now?</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- Come to the discord</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="subtitle2" sx={styles.needText}>From there we can all talk about ideas and development.</Typography>
+                </Box>
+                <Box sx={{marginTop: '50px'}}>
+                    <Typography variant="h4" sx={[styles.subHeader, {color: '#029aa8', fontWeight: 'bold'}]}>See you there soon!</Typography>
+                </Box>
             </Container>
         </ThemeProvider>
     );
