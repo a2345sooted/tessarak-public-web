@@ -44,13 +44,49 @@ function App() {
                     <Grid xs={12} md={4}><InfoCard title="ZERO" subtitle="Compromises"/></Grid>
                 </Grid>
                 <Box sx={{marginTop: '50px'}}>
-                    <Typography variant="h5" sx={styles.subHeader}>The Requirement:</Typography>
+                    <Typography variant="h5" sx={[styles.subHeader, {fontWeight: 'bold'}]}>The Requirement:</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
-                    <Typography variant="h6" sx={styles.needTitle}>- Can NOT be censored or shut down by government or corporations.</Typography>
+                    <Typography variant="h6" sx={[styles.needTitle, {color: '#029aa8'}]}>- Can not be censored or shut down by government or corporations -- like, the tech won't allow for it.</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
-                    <Typography variant="subtitle1" sx={styles.needText}>*** If we can not meet that requirement with our current tech, then we are gonna build new tech that can meet that requirement.</Typography>
+                    <Typography variant="subtitle1" sx={[styles.needText, {fontWeight: 'bold'}]}>If we can not meet that requirement with our current tech, then we are gonna build new tech that can.</Typography>
+                </Box>
+                <Box sx={{marginTop: '50px'}}>
+                    <Typography variant="h5" sx={styles.subHeader}>Congrats, you are the earliest of early adopters!</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- Android Users: Download the apk.</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Box sx={{marginTop: '10px'}}>
+                        <Typography
+                            component={Link}
+                            target="_blank"
+                            href="https://tessarak-android-alpha-apk.s3.amazonaws.com/tessarak_social_release_1.0.apk"
+                            variant="subtitle1"
+                            sx={[styles.needText, {color: '#029aa8'}]}>
+                            Click here to start download / installation
+                        </Typography>
+                    </Box>
+                </Box>
+                <Box sx={{marginTop: '10px', marginBottom: '20px'}}>
+                    <Typography variant="subtitle2" sx={styles.needText}>* You'll have to accept installs from unknown developers since this isn't in the Play Store yet.</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Typography variant="h6" sx={styles.needTitle}>- iPhone Users: Sign up for the iOS TestFlight.</Typography>
+                </Box>
+                <Box sx={{marginTop: '10px'}}>
+                    <Box sx={{marginTop: '10px'}}>
+                        <Typography
+                            component={Link}
+                            target="_blank"
+                            href="https://testflight.apple.com/join/t1n230LE"
+                            variant="subtitle1"
+                            sx={[styles.needText, {color: '#029aa8'}]}>
+                            Click here to sign up for Tessarak beta testing on TestFlight
+                        </Typography>
+                    </Box>
                 </Box>
                 <Box sx={{marginTop: '50px'}}>
                     <Typography variant="h5" sx={styles.subHeader}>What we urgently need from the community:</Typography>
@@ -156,15 +192,6 @@ function App() {
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
                     <Typography variant="subtitle2" sx={styles.needText}>TheDarkNode setup and runs the discord server.</Typography>
-                </Box>
-                <Box sx={{marginTop: '10px'}}>
-                    <Typography variant="h6" sx={styles.needTitle}>- Tessa Glenn, The Curl Whisperer</Typography>
-                </Box>
-                <Box sx={{marginTop: '10px'}}>
-                    <Typography variant="subtitle2" sx={styles.needText}>Tessa is a hairstylist in Columbia, MO.  Her name served as an inspiration for Tessarak.</Typography>
-                </Box>
-                <Box sx={{marginTop: '50px'}}>
-                    <Typography variant="h4" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#029aa8'}}>Come to the discord server to chat, get setup on the repos, and/or get the mobile app!</Typography>
                 </Box>
             </Container>
         </ThemeProvider>
