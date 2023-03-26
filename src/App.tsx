@@ -47,7 +47,7 @@ function App() {
                     <Typography variant="h5" sx={[styles.subHeader, {fontWeight: 'bold'}]}>The Requirement:</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
-                    <Typography variant="h6" sx={[styles.needTitle, {color: '#029aa8'}]}>- Can not be censored or shut down by government or corporations -- like, the tech won't allow for it.</Typography>
+                    <Typography variant="h6" sx={[styles.needTitle, {color: '#fc8b0b'}]}>- Tessarak can not be censored or shut down by government or corporations -- like, the tech won't allow for it.</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
                     <Typography variant="subtitle1" sx={[styles.needText, {fontWeight: 'bold'}]}>If we can not meet that requirement with our current tech, then we are gonna build new tech that can.</Typography>
@@ -197,7 +197,7 @@ function App() {
                     <Typography variant="h6" sx={styles.needTitle}>- Tessa Glenn, The Curl Whisperer</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
-                    <Typography variant="subtitle2" sx={styles.needText}>Tessa is a hairstylist in Columbia, MO. She served as an inspiration with her name and Tessarak started an AI companion for hairstylists.</Typography>
+                    <Typography variant="subtitle2" sx={styles.needText}>Tessa is a hairstylist in Columbia, MO. She served as an inspiration with her name and Tessarak started as an AI companion for hairstylists.</Typography>
                 </Box>
                 <Box sx={{marginTop: '50px'}}>
                     <Typography variant="h5" sx={[styles.subHeader, {color: '#029aa8', fontWeight: 'bold'}]}>What to do right now?</Typography>
