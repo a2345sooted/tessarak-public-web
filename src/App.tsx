@@ -84,10 +84,21 @@ function TheRequirementSection(): JSX.Element {
 
 function App() {
     const [theme, setTheme] = useState(DARK_THEME);
+
+    async function getAndroidApp(): Promise<void> {
+        const response = await fetch('https://tessarak-webserver-prod-u4686.kinsta.app/v1/apk');
+        const url = await response.text();
+        window.open(url, '_blank');
+    }
+
+    async function getIphoneApp(): Promise<void> {
+        window.open('https://testflight.apple.com/join/t1n230LE', '_blank');
+    }
+
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline/>
-            <Container maxWidth="md" sx={{paddingTop: '40px', paddingLeft: '40px', paddingRight: '40px', paddingBottom: '150px'}}>
+            <Container maxWidth="md" sx={{paddingTop: '40px', paddingLeft: '40px', paddingRight: '40px', paddingBottom: '50px'}}>
                 <Box sx={{textAlign: 'center'}}>
                     <img src={tessarakTypography} width="400px"/>
                 </Box>
@@ -115,13 +126,13 @@ function App() {
                     <Typography variant="h5" sx={[styles.needTitle, {color: '#f3f3f3'}]}>You can get the Tessarak app right now and start chatting with Tessa.</Typography>
                 </Box>
                 <Box sx={{marginTop: '30px'}}>
-                    <Button variant="contained" color="secondary" startIcon={<AndroidIcon/>}><Typography variant="h6" sx={{fontWeight: 'bold'}}>Get the Android App</Typography></Button>
+                    <Button onClick={getAndroidApp} variant="contained" color="secondary" startIcon={<AndroidIcon/>}><Typography variant="h6" sx={{fontWeight: 'bold'}}>Get the Android App</Typography></Button>
                 </Box>
                 <Box sx={{marginTop: '20px', marginBottom: '20px'}}>
                     <Typography variant="subtitle1" sx={styles.needText}>You'll have to accept installs from unknown developers since this isn't in the Play Store yet.</Typography>
                 </Box>
                 <Box sx={{marginTop: '30px'}}>
-                    <Button variant="contained" color="secondary" startIcon={<AppleIcon/>}><Typography variant="h6" sx={{fontWeight: 'bold'}}>Get the Iphone App</Typography></Button>
+                    <Button onClick={getIphoneApp} variant="contained" color="secondary" startIcon={<AppleIcon/>}><Typography variant="h6" sx={{fontWeight: 'bold'}}>Get the Iphone App</Typography></Button>
                 </Box>
                 <Box sx={{marginTop: '20px', marginBottom: '20px'}}>
                     <Typography variant="subtitle1" sx={styles.needText}>For iphone users, you will be directed to enroll in the Testflight beta testing of Tessarak, since the app isn't in the app store yet.</Typography>
@@ -130,7 +141,7 @@ function App() {
                 {/*CALL TO ACTION SECTION*/}
                 <Divider sx={{marginTop: '20px'}}/>
                 <Box sx={{marginTop: '30px'}}>
-                    <Typography variant="h4" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#e851be'}}>You MUST help to make this happen.</Typography>
+                    <Typography variant="h4" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#e851be'}}>YOU, yes YOU, MUST help to make this happen.</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
                     <Typography variant="h5" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#f3f3f3'}}>Here's how you can help:</Typography>
@@ -153,7 +164,7 @@ function App() {
                 {/*CODE LINKS SECTION*/}
                 <Divider sx={{marginTop: '20px'}}/>
                 <Box sx={{marginTop: '30px'}}>
-                    <Typography variant="h5" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#e851be'}}>Here's where the code is: </Typography>
+                    <Typography variant="h5" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#c66ef1'}}>Here's where the code is: </Typography>
                 </Box>
                 <Box sx={{marginTop: '20px'}}>
                     <TkLink url={'https://github.com/a2345sooted/tessarak-social'} display={'REACT NATIVE APP'}/>
@@ -163,6 +174,33 @@ function App() {
                 </Box>
                 <Box sx={{marginTop: '20px'}}>
                     <TkLink url={'https://github.com/a2345sooted/tessarak-public-web'} display={'THIS VERY PUBLIC WEBSITE'}/>
+                </Box>
+
+                {/*DISCORD SECTION*/}
+                <Divider sx={{marginTop: '20px'}}/>
+                <Box sx={{marginTop: '30px'}}>
+                    <Typography variant="h5" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#e851be'}}>Here's the discord:</Typography>
+                </Box>
+                <Box sx={{marginTop: '20px'}}>
+                    <TkLink url={'https://discord.gg/jb35c6gM'} display={'Join the Discord'}/>
+                </Box>
+
+                {/*SPECIAL THANKS*/}
+                <Divider sx={{marginTop: '20px'}}/>
+                <Box sx={{marginTop: '30px', marginBottom: '20px'}}>
+                    <Typography variant="h5" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#c66ef1'}}>Special Thanks:</Typography>
+                </Box>
+                <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 650: 2, 900: 3}}>
+                    <Masonry>
+                        <CTACard key="1" title="TheDarkNode" subtitle="TheDarkNode is true OG, and the admin of the Discord server."/>
+                        <CTACard key="2" title="Tessa Glenn" subtitle="Tessa is a hairstylist in Columbia, MO. She served as an inspiration with her name and Tessarak started as an AI companion for hairstylists."/>
+                        <CTACard key="3" title="LeAnn Holtmeyer" subtitle="LeAnn is good friend of the foundation and she has helped a lot to keep the path cleared for the devs."/>
+                    </Masonry>
+                </ResponsiveMasonry>
+
+                {/*FOOTER SECTION*/}
+                <Box sx={{marginTop: '75px', textAlign: 'center'}}>
+                    <Typography variant="h5" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#f3f3f3'}}>The Tessarak Project &middot; 2023</Typography>
                 </Box>
             </Container>
         </ThemeProvider>
@@ -192,128 +230,3 @@ const styles = {
 };
 
 export default App;
-
-// }
-// {/*<Box sx={{marginTop: '50px'}}>*/
-// }
-// {/*    <Typography variant="h5" sx={styles.subHeader}>Where can we talk for now?</Typography>*/
-// }
-// {/*</Box>*/
-// }
-// {/*<Box sx={{marginTop: '10px'}}>*/
-// }
-// {/*    <Typography variant="h6" sx={styles.needTitle}>- The Tessarak Project Discord Server</Typography>*/
-// }
-// {/*</Box>*/
-// }
-// {/*<Box sx={{marginTop: '10px'}}>*/
-// }
-// {/*    <Typography*/
-// }
-// {/*        component={Link}*/
-// }
-// {/*        target="_blank"*/
-// }
-// {/*        href="https://discord.gg/jb35c6gM"*/
-// }
-// {/*        variant="h6"*/
-// }
-// {/*        sx={[styles.needText, {color: '#029aa8'}]}>*/
-// }
-// {/*        https://discord.gg/jb35c6gM*/
-// }
-// {/*    </Typography>*/
-// }
-// {/*</Box>*/
-// }
-// {/*<Box sx={{marginTop: '50px'}}>*/
-// }
-// {/*    <Typography variant="h5" sx={styles.subHeader}>Where is the code?</Typography>*/
-// }
-// {/*</Box>*/
-// }
-// {/*<Box sx={{marginTop: '10px'}}>*/
-// }
-// {/*    <Typography variant="h6" sx={styles.needTitle}>- Here is the code for the react native mobile app:</Typography>*/
-// }
-// {/*</Box>*/
-// }
-
-// {/*<Box sx={{marginTop: '10px'}}>*/
-// }
-// {/*    <Typography variant="h6" sx={styles.needTitle}>- Here is the code for this public website app:</Typography>*/
-// }
-// {/*</Box>*/
-// }
-// {/*<Box sx={{marginTop: '10px'}}>*/
-// }
-// {/*    <Typography*/
-// }
-// {/*        component={Link}*/
-// }
-// {/*        target="_blank"*/
-// }
-// {/*        href="https://github.com/a2345sooted/tessarak-public-web"*/
-// }
-// {/*        variant="subtitle1"*/
-// }
-// {/*        sx={[styles.needText, {color: '#029aa8'}]}>*/
-// }
-// {/*        https://github.com/a2345sooted/tessarak-public-web*/
-// }
-// {/*    </Typography>*/
-// }
-// {/*</Box>*/
-// }
-// {/*<Box sx={{marginTop: '50px'}}>*/
-// }
-// {/*    <Typography variant="h5" sx={styles.subHeader}>Special Thanks:</Typography>*/
-// }
-// {/*</Box>*/
-// }
-// {/*<Box sx={{marginTop: '10px'}}>*/
-// }
-// {/*    <Typography variant="h6" sx={styles.needTitle}>- TheDarkNode</Typography>*/
-// }
-// {/*</Box>*/
-// }
-// {/*<Box sx={{marginTop: '10px'}}>*/
-// }
-// {/*    <Typography variant="subtitle2" sx={styles.needText}>TheDarkNode setup and runs the discord server.</Typography>*/
-// }
-// {/*</Box>*/
-// }
-// {/*<Box sx={{marginTop: '10px'}}>*/
-// }
-// {/*    <Typography variant="h6" sx={styles.needTitle}>- Tessa Glenn, The Curl Whisperer</Typography>*/
-// }
-// {/*</Box>*/
-// }
-// {/*<Box sx={{marginTop: '10px'}}>*/
-// }
-// {/*    <Typography variant="subtitle2" sx={styles.needText}>Tessa is a hairstylist in Columbia, MO. She served as an inspiration with her name and Tessarak started as an AI companion for hairstylists.</Typography>*/
-// }
-// {/*</Box>*/
-// }
-// {/*<Box sx={{marginTop: '50px'}}>*/
-// }
-// {/*    <Typography variant="h5" sx={[styles.subHeader, {color: '#029aa8', fontWeight: 'bold'}]}>What to do right now?</Typography>*/
-// }
-// {/*</Box>*/
-// }
-// {/*<Box sx={{marginTop: '10px'}}>*/
-// }
-// {/*    <Typography variant="h6" sx={styles.needTitle}>- Come to the discord</Typography>*/
-// }
-// {/*</Box>*/
-// }
-// {/*<Box sx={{marginTop: '10px'}}>*/
-// }
-// {/*    <Typography variant="subtitle2" sx={styles.needText}>From there we can all talk about ideas and development.</Typography>*/
-// }
-// {/*</Box>*/
-// }
-// {/*<Box sx={{marginTop: '50px'}}>*/
-// }
-// {/*    <Typography variant="h4" sx={[styles.subHeader, {color: '#029aa8', fontWeight: 'bold'}]}>See you there soon!</Typography>*/
-// }
