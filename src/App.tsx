@@ -102,6 +102,7 @@ function App() {
                 <Box sx={{textAlign: 'center'}}>
                     <img src={tessarakTypography} width="250px"/>
                 </Box>
+                <Divider sx={{marginTop: '20px'}}/>
                 <MainBullets/>
                 <Divider sx={{marginTop: '5px', marginBottom: '15px'}}/>
                 <TheRequirementSection/>
@@ -113,7 +114,7 @@ function App() {
                 {/*EXPLANATION SECTION*/}
                 <Divider sx={{marginTop: '20px'}}/>
                 <Box sx={{marginTop: '30px'}}>
-                    <Typography variant="h6" sx={[styles.needTitle, {color: '#e851be'}]}>Tessarak is a social meda app that incorporates many loved features from TikTok, Signal, Facebook, etc.</Typography>
+                    <Typography variant="h6" sx={[styles.needTitle, {color: '#e851be'}]}>Tessarak is a social media app that incorporates many loved features from TikTok, Signal, Facebook, etc.</Typography>
                 </Box>
                 <Divider sx={{marginTop: '20px'}}/>
                 <Box sx={{marginTop: '30px'}}>
@@ -141,7 +142,7 @@ function App() {
                 {/*CALL TO ACTION SECTION*/}
                 <Divider sx={{marginTop: '20px'}}/>
                 <Box sx={{marginTop: '30px'}}>
-                    <Typography variant="h4" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#e851be'}}>YOU, yes YOU, MUST help to make this happen.</Typography>
+                    <Typography variant="h4" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#e851be'}}>YOU MUST help to make this happen.</Typography>
                 </Box>
                 <Box sx={{marginTop: '10px'}}>
                     <Typography variant="h5" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#f3f3f3'}}>Here's how you can help:</Typography>
@@ -173,7 +174,7 @@ function App() {
                     <TkLink url={'https://github.com/a2345sooted/tessarak-webserver'} display={'NODEJS API SERVER'}/>
                 </Box>
                 <Box sx={{marginTop: '20px'}}>
-                    <TkLink url={'https://github.com/a2345sooted/tessarak-public-web'} display={'THIS VERY PUBLIC WEBSITE'}/>
+                    <TkLink url={'https://github.com/a2345sooted/tessarak-public-web'} display={'PUBLIC WEBSITE'}/>
                 </Box>
 
                 {/*DISCORD SECTION*/}
@@ -192,7 +193,7 @@ function App() {
                 </Box>
                 <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 650: 2, 900: 3}}>
                     <Masonry>
-                        <CTACard key="1" title="TheDarkNode" subtitle="TheDarkNode is true OG, and the admin of the Discord server."/>
+                        <CTACard key="1" title="TheDarkNode" subtitle="TheDarkNode is a true OG, and the admin of the Discord server."/>
                         <CTACard key="2" title="Tessa Glenn" subtitle="Tessa is a hairstylist in Columbia, MO. She served as an inspiration with her name and Tessarak started as an AI companion for hairstylists."/>
                         <CTACard key="3" title="LeAnn Holtmeyer" subtitle="LeAnn is good friend of the foundation and she has helped a lot to keep the path cleared for the devs."/>
                     </Masonry>
@@ -200,7 +201,7 @@ function App() {
 
                 {/*FOOTER SECTION*/}
                 <Box sx={{marginTop: '75px', textAlign: 'center'}}>
-                    <Typography variant="h5" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#f3f3f3'}}>The Tessarak Project &middot; 2023</Typography>
+                    <Typography variant="h5" sx={{fontFamily: 'Exo 2', fontWeight: 'bold', color: '#f3f3f3'}}>The Tessarak Project 2023</Typography>
                 </Box>
             </Container>
         </ThemeProvider>
