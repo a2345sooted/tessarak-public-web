@@ -100,7 +100,7 @@ function App() {
             <CssBaseline/>
             <Container maxWidth="md" sx={{paddingTop: '40px', paddingLeft: '40px', paddingRight: '40px', paddingBottom: '50px'}}>
                 <Box sx={{textAlign: 'center'}}>
-                    <img src={tessarakTypography} width="400px"/>
+                    <img src={tessarakTypography} width="250px"/>
                 </Box>
                 <MainBullets/>
                 <Divider sx={{marginTop: '5px', marginBottom: '15px'}}/>
