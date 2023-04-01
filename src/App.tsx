@@ -138,6 +138,20 @@ function App() {
                 <Box sx={{marginTop: '20px', marginBottom: '20px'}}>
                     <Typography variant="subtitle1" sx={styles.needText}>For iphone users, you will be directed to enroll in the Testflight beta testing of Tessarak, since the app isn't in the app store yet.</Typography>
                 </Box>
+                <Box sx={{marginTop: '20px', marginBottom: '20px'}}>
+                    <Box sx={{padding: '8px'}}>
+                        <Card>
+                            <CardContent>
+                                <Box sx={{textAlign: 'center'}}>
+                                    <Typography variant="h5" sx={[styles.cardSubtitle, {fontWeight: '600', color: '#FFFFFF'}]}>IPhone Redeem Code</Typography>
+                                </Box>
+                                <Box sx={{textAlign: 'center'}}>
+                                    <Typography variant="h5" sx={[styles.cardSubtitle, {color: '#e851be'}]}>t1n230LE</Typography>
+                                </Box>
+                            </CardContent>
+                        </Card>
+                    </Box>
+                </Box>
 
                 {/*CALL TO ACTION SECTION*/}
                 <Divider sx={{marginTop: '20px'}}/>
